@@ -1,12 +1,17 @@
 import React from 'react'
 
 interface Props {
-  visible: boolean
+  visible: boolean,
+  close: () => void
 }
-const Modal = ({visible} : Props) => {
+const Modal = ({visible, close} : Props) => {
   return (
     <div>
-      {visible ? <>Modal</> : null}
+      {visible ? 
+      <>
+        <h3>Modal</h3>
+        <button onClick={close}>Close</button>
+      </> : null}
     </div>
   )
 }
