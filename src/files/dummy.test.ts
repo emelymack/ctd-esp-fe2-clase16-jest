@@ -1,4 +1,4 @@
-import dummy from "../files/dummy";
+import dummy from "./dummy";
 
 describe("dummy", () => {
     const mockCallback = jest.fn()

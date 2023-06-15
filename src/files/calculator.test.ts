@@ -1,4 +1,4 @@
-import calculator from "../files/calculator";
+import calculator from "./calculator";
 
 describe("calculadora", () => {
     it("Add 1 to 2 should return 3", () => {

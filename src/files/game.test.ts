@@ -1,4 +1,4 @@
-import game from "../files/game";
+import game from "./game";
 
 describe("game", () => {
     it("game should return the right object", () => {
