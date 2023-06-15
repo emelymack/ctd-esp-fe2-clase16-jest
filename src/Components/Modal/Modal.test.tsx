@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import { act, render, screen } from "@testing-library/react"
 import Modal from "./Modal"
 import userEvent from "@testing-library/user-event"
 
@@ -30,7 +30,10 @@ describe("Modal component", () => {
       render(<Modal visible={true} close={closeModal} />)
 
       const button = screen.getByRole("button", {name: 'Close'});
-      userEvent.click(button)
+      
+      act(() => {
+        userEvent.click(button)
+      })
       expect(closeModal).toBeCalled();
     })
   })
